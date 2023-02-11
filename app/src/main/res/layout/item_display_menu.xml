@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/tea"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Bakery"
+            android:padding="5dp"
+            android:fontFamily="@font/muli_black"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txt_item_display_menu_price"
+            android:background="#8F000000"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Còn món"
+            android:textColor="@color/white"
+            android:background="@drawable/round_corner_categorytext"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="5dp"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/txt_item_display_menu_price"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="10000 VND"
+            android:padding="5dp"
+            android:fontFamily="@font/muli_black"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#8F000000"
+            android:gravity="center"/>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

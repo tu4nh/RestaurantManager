@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.restaurantmanager.ui.splash.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.restaurantmanager.ui.register.register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_register2"
+            app:destination="@id/register2" />
+    </fragment>
+    <fragment
+        android:id="@+id/register2"
+        android:name="com.example.restaurantmanager.ui.register.register2"
+        android:label="fragment_register2"
+        tools:layout="@layout/fragment_register2" >
+        <action
+            android:id="@+id/action_register2_to_welcome"
+            app:destination="@id/welcome" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.restaurantmanager.ui.welcome.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.restaurantmanager.ui.login.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.restaurantmanager.ui.home.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_detailStatistic"
+            app:destination="@id/detailStatistic" />
+        <action
+            android:id="@+id/action_home2_to_displayTable2"
+            app:destination="@id/displayTable" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailStatistic"
+        android:name="com.example.restaurantmanager.ui.detailstatistic.DetailStatistic"
+        android:label="fragment_detail_statistic"
+        tools:layout="@layout/fragment_detail_statistic" />
+    <fragment
+        android:id="@+id/displayTable"
+        android:name="com.example.restaurantmanager.ui.displaitable.DisplayTable"
+        android:label="fragment_display_table"
+        tools:layout="@layout/fragment_display_table" />
+    <fragment
+        android:id="@+id/amount2"
+        android:name="com.example.restaurantmanager.ui.amount.Amount"
+        android:label="fragment_amount"
+        tools:layout="@layout/fragment_amount" />
+</navigation>
